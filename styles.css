@@ -2,70 +2,92 @@ body {
     margin: 0;
     font-family: 'Georgia', serif;
     color: white;
-    background: radial-gradient(circle at center, #050510, #000000);
+    background: radial-gradient(circle at center, #020111, #000000);
+    overflow-x: hidden;
 }
 
-/* ESTRELLAS */
+/* GALAXIA */
 body::before {
     content: "";
     position: fixed;
-    width: 300%;
-    height: 300%;
-    background: url("https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png");
-    animation: estrellas 100s linear infinite;
+    width: 200%;
+    height: 200%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: mover1 100s linear infinite;
     opacity: 0.4;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: mover2 160s linear infinite;
+    opacity: 0.2;
     z-index: -1;
 }
 
-@keyframes estrellas {
+@keyframes mover1 {
     from { transform: translate(0,0); }
-    to { transform: translate(-1000px, -1000px); }
+    to { transform: translate(-800px, -800px); }
+}
+
+@keyframes mover2 {
+    from { transform: translate(0,0); }
+    to { transform: translate(-400px, -400px); }
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px;
-    border-bottom: 1px solid white;
+    padding: 20px;
 }
 
-header h1 {
-    font-size: 3em;
-    letter-spacing: 2px;
-}
-
-/* TITULAR */
-.portada {
-    padding: 40px;
-    text-align: center;
-}
-
-.portada h2 {
-    font-size: 2em;
-    color: cyan;
-}
-
-/* SECCIONES */
+/* CONTENIDO */
 .seccion {
-    padding: 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
 /* TARJETAS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
 .card {
     background: rgba(255,255,255,0.05);
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.03);
     box-shadow: 0 0 15px cyan;
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TEXTO */
+h1, h2 {
+    color: cyan;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* EXPANSIÓN */
+.extra {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.card.active .extra {
+    max-height: 500px;
 }

@@ -2,64 +2,72 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Periódico Astronómico</title>
+<title>Periódico semanal CBTis #4</title>
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
     <h1>📰 Periódico semanal CBTis #4</h1>
-<p>Edición del 13 al 17 de abril 2026</p>
+    <p>13 - 17 de abril 2026</p>
 </header>
 
-<section class="portada">
-    <h2>🚀 Artemis II: El regreso histórico a la Luna</h2>
-    <p>
-        La humanidad vuelve al entorno lunar tras más de 50 años,
-        marcando el inicio de una nueva era en la exploración espacial.
-    </p>
-</section>
-
 <section class="seccion">
-    <h2>🌕 Eventos recientes</h2>
-    <div class="grid">
 
-        <div class="card">
-            <h3>Luna Rosa</h3>
-            <p>Fenómeno astronómico visible mundialmente durante abril.</p>
-        </div>
-
-        <div class="card">
-            <h3>Cometa C/2025 R3</h3>
-            <p>Visible con telescopios desde la Tierra.</p>
-        </div>
-
-        <div class="card">
-            <h3>Mercurio visible</h3>
-            <p>Uno de los mejores momentos del año para observarlo.</p>
-        </div>
-
+<div class="card" onclick="toggleNoticia(this)">
+    <h2>🚀 Artemis II: regreso a la Luna</h2>
+    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/artemisii.jpg">
+    <p class="resumen">La humanidad regresa al entorno lunar tras más de 50 años.</p>
+    <div class="extra">
+        <p>La misión Artemis II llevó astronautas alrededor de la Luna, probando sistemas clave.</p>
+        <p>Este avance permitirá futuras bases lunares y viajes a Marte.</p>
     </div>
-</section>
+</div>
 
-<section class="seccion">
-    <h2>🌠 Próximos eventos</h2>
-    <div class="grid">
-
-        <div class="card">
-            <h3>Lluvia Líridas</h3>
-            <p>21-22 de abril, hasta 20 meteoros por hora.</p>
-        </div>
-
+<div class="card" onclick="toggleNoticia(this)">
+    <h2>🌕 Luna Rosa</h2>
+    <img src="https://space-facts.com/wp-content/uploads/pink-moon.jpg">
+    <p class="resumen">Fenómeno visible en abril en todo el mundo.</p>
+    <div class="extra">
+        <p>No cambia realmente de color; su nombre proviene de flores primaverales.</p>
+        <p>Fue muy observada por su coincidencia con eventos espaciales.</p>
     </div>
+</div>
+
+<div class="card" onclick="toggleNoticia(this)">
+    <h2>☄️ Cometa C/2025 R3</h2>
+    <img src="https://solarsystem.nasa.gov/system/resources/detail_files/249_comet.jpg">
+    <p class="resumen">Visible con telescopios desde la Tierra.</p>
+    <div class="extra">
+        <p>Este cometa ha generado gran interés en la comunidad científica.</p>
+        <p>Permite estudiar el origen del sistema solar.</p>
+    </div>
+</div>
+
+<div class="card" onclick="toggleNoticia(this)">
+    <h2>🌠 Lluvia de meteoros Líridas</h2>
+    <img src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/lyrids.jpg">
+    <p class="resumen">Evento astronómico esperado en abril.</p>
+    <div class="extra">
+        <p>Alcanzará su punto máximo el 21-22 de abril.</p>
+        <p>Hasta 20 meteoros por hora visibles desde México.</p>
+    </div>
+</div>
+
+<div class="card" onclick="toggleNoticia(this)">
+    <h2>🌌 Futuro de la exploración espacial</h2>
+    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/moon_base.jpg">
+    <p class="resumen">La humanidad apunta a la Luna y Marte.</p>
+    <div class="extra">
+        <p>Se planea construir bases en la Luna.</p>
+        <p>Estas servirán como punto de partida hacia Marte.</p>
+    </div>
+</div>
+
 </section>
 
-<section class="seccion">
-    <h2>🌌 Futuro espacial</h2>
-    <p>
-        La NASA planea establecer bases en la Luna y continuar con la exploración hacia Marte.
-    </p>
-</section>
+<script src="script.js"></script>
 
 </body>
 </html>
